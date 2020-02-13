@@ -1,0 +1,20 @@
+version: '3'
+services:
+  logging:
+    image: logging:latest
+    container_name: logging
+    volume:
+      - type: volume
+        source: logs
+        target: /var/log/tools/
+  filebeat:
+    image: filebeat
+    container_name: filebeat
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - type: volume
+        source: logs
+        target: /var/log/tools
+
+volumes:
+  logs:

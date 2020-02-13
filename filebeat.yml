@@ -1,0 +1,8 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/tools/api.log
+
+output.logstash:
+      hosts: ["54.65.185.106:5044"]
