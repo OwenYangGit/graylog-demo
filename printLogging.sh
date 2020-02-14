@@ -7,5 +7,5 @@ do
     RANDOM=$$$(date +%s)
     message=${setList[$RANDOM % ${#setList[@]}]}
     echo $message && echo $message >> /var/log/tools/api.log
-    sleep 3
+    sleep 10
 done

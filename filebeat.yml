@@ -5,4 +5,4 @@ filebeat.inputs:
     - /var/log/tools/api.log
 
 output.logstash:
-      hosts: ["54.65.185.106:5044"]
+      hosts: ["54.150.254.67:5044"]
